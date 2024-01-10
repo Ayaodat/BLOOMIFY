@@ -1,0 +1,50 @@
+﻿@model Bloomify.Models.User
+<div class="container" style="display: flex;justify-content: center;">
+    <div class="registration-form">
+        <div class="registration-header">
+            Joining 5Dots
+        </div>
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="FirstName" class="form-label"></label>
+                <input asp-for="FirstName" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="LastName" class="form-label"></label>
+                <input asp-for="LastName" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="PhoneNumber" class="form-label"></label>
+                <input asp-for="PhoneNumber" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="FormFile">File Picture:</label>
+                <input type="file" class="form-control" name="FormFile">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="Password">Password:</label>
+                <input type="password" class="form-control" name="Password" autocomplete="new-password" aria-required="true">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="ConfirmPassword">Confirm Password:</label>
+                <input type="password" class="form-control" name="ConfirmPassword" autocomplete="new-password" aria-required="true">
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-success submit-btn" style="width: 100%;">Create</button>
+            </div>
+        </form>
+    </div>
+</div>
